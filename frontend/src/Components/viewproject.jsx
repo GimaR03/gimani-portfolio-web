@@ -1,150 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const ViewProject = () => {
-  const [playbackSpeed, setPlaybackSpeed] = useState(1);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [animalPlantPlaying, setAnimalPlantPlaying] = useState(false);
-  const [animalPlantFullscreen, setAnimalPlantFullscreen] = useState(false);
-  const [fullVideoPlaying, setFullVideoPlaying] = useState(false);
-  const [fullVideoFullscreen, setFullVideoFullscreen] = useState(false);
-  const videoRef = useRef(null);
-  const fullscreenVideoRef = useRef(null);
-  const animalPlantVideoRef = useRef(null);
-  const animalPlantFullscreenRef = useRef(null);
-  const fullVideoVideoRef = useRef(null);
-  const fullVideoFullscreenRef = useRef(null);
-
-  const speedOptions = [1, 1.25, 1.5, 1.75, 2];
-
-  const handleSpeedChange = (speed) => {
-    setPlaybackSpeed(speed);
-    if (videoRef.current) {
-      videoRef.current.playbackRate = speed;
-    }
-    if (fullscreenVideoRef.current) {
-      fullscreenVideoRef.current.playbackRate = speed;
-    }
-  };
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const openFullscreenVideo = () => {
-    setIsFullscreen(true);
-    setTimeout(() => {
-      if (fullscreenVideoRef.current) {
-        fullscreenVideoRef.current.play();
-        // Auto minimize after video ends
-        fullscreenVideoRef.current.onended = () => {
-          setIsFullscreen(false);
-          setIsPlaying(false);
-        };
-      }
-    }, 100);
-  };
-
-  const closeFullscreenVideo = () => {
-    if (fullscreenVideoRef.current) {
-      fullscreenVideoRef.current.pause();
-    }
-    setIsFullscreen(false);
-    setIsPlaying(false);
-  };
-
-  const toggleAnimalPlantPlay = () => {
-    if (animalPlantVideoRef.current) {
-      if (animalPlantPlaying) {
-        animalPlantVideoRef.current.pause();
-      } else {
-        animalPlantVideoRef.current.play();
-      }
-      setAnimalPlantPlaying(!animalPlantPlaying);
-    }
-  };
-
-  const openAnimalPlantFullscreen = () => {
-    setAnimalPlantFullscreen(true);
-    setTimeout(() => {
-      if (animalPlantFullscreenRef.current) {
-        animalPlantFullscreenRef.current.play();
-        // Auto minimize after video ends
-        animalPlantFullscreenRef.current.onended = () => {
-          setAnimalPlantFullscreen(false);
-          setAnimalPlantPlaying(false);
-        };
-      }
-    }, 100);
-  };
-
-  const closeAnimalPlantFullscreen = () => {
-    if (animalPlantFullscreenRef.current) {
-      animalPlantFullscreenRef.current.pause();
-    }
-    setAnimalPlantFullscreen(false);
-    setAnimalPlantPlaying(false);
-  };
-
-  const handleAnimalPlantSpeedChange = (speed) => {
-    if (animalPlantVideoRef.current) {
-      animalPlantVideoRef.current.playbackRate = speed;
-    }
-    if (animalPlantFullscreenRef.current) {
-      animalPlantFullscreenRef.current.playbackRate = speed;
-    }
-  };
-
-  const toggleFullVideoPlay = () => {
-    if (fullVideoVideoRef.current) {
-      if (fullVideoPlaying) {
-        fullVideoVideoRef.current.pause();
-      } else {
-        fullVideoVideoRef.current.play();
-      }
-      setFullVideoPlaying(!fullVideoPlaying);
-    }
-  };
-
-  const openFullVideoFullscreen = () => {
-    setFullVideoFullscreen(true);
-    setTimeout(() => {
-      if (fullVideoFullscreenRef.current) {
-        fullVideoFullscreenRef.current.play();
-        // Auto minimize after video ends
-        fullVideoFullscreenRef.current.onended = () => {
-          setFullVideoFullscreen(false);
-          setFullVideoPlaying(false);
-        };
-      }
-    }, 100);
-  };
-
-  const closeFullVideoFullscreen = () => {
-    if (fullVideoFullscreenRef.current) {
-      fullVideoFullscreenRef.current.pause();
-    }
-    setFullVideoFullscreen(false);
-    setFullVideoPlaying(false);
-  };
-
-  const handleFullVideoSpeedChange = (speed) => {
-    if (fullVideoVideoRef.current) {
-      fullVideoVideoRef.current.playbackRate = speed;
-    }
-    if (fullVideoFullscreenRef.current) {
-      fullVideoFullscreenRef.current.playbackRate = speed;
-    }
-  };
-
   return (
     <motion.div
       className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-6 py-12"
@@ -169,28 +26,8 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="relative h-48 bg-gray-200 dark:bg-gray-700">
-              <video
-                ref={animalPlantVideoRef}
-                src="/videos/AnimalPlant.mp4"
-                className="w-full h-full object-cover cursor-pointer"
-                onClick={openAnimalPlantFullscreen}
-              />
-
-              {/* Play Button Overlay */}
-              <button
-                onClick={openAnimalPlantFullscreen}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-70 transition-all"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 4l10 6-10 6V4z"/>
-                </svg>
-              </button>
-
-              {/* Click to play hint */}
-              <div className="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
-                Click to play
-              </div>
+            <div className="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+              <span className="text-white text-6xl">🌿</span>
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
@@ -214,34 +51,14 @@ const ViewProject = () => {
             </div>
           </motion.div>
           
-          {/* Additional project placeholder */}
+          {/* FitMe App Project */}
           <motion.div 
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="relative h-48 bg-gray-200 dark:bg-gray-700">
-              <video
-                ref={videoRef}
-                src="/videos/fitme.mp4"
-                className="w-full h-full object-cover cursor-pointer"
-                onClick={openFullscreenVideo}
-              />
-              
-              {/* Play Button Overlay */}
-              <button
-                onClick={openFullscreenVideo}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-70 transition-all"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 4l10 6-10 6V4z"/>
-                </svg>
-              </button>
-              
-              {/* Click to play hint */}
-              <div className="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
-                Click to play
-              </div>
+            <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+              <span className="text-white text-6xl">💪</span>
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
@@ -271,28 +88,8 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="relative h-48 bg-gray-200 dark:bg-gray-700">
-              <video
-                ref={fullVideoVideoRef}
-                src="/videos/fullVideo.mp4"
-                className="w-full h-full object-cover cursor-pointer"
-                onClick={openFullVideoFullscreen}
-              />
-
-              {/* Play Button Overlay */}
-              <button
-                onClick={openFullVideoFullscreen}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-70 transition-all"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 4l10 6-10 6V4z"/>
-                </svg>
-              </button>
-
-              {/* Click to play hint */}
-              <div className="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
-                Click to play
-              </div>
+            <div className="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+              <span className="text-white text-6xl">🌾</span>
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
@@ -319,171 +116,6 @@ const ViewProject = () => {
           </motion.div>
         </div>
       </div>
-      
-      {/* Fullscreen Video Modal */}
-      {isFullscreen && (
-        <motion.div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={closeFullscreenVideo}
-        >
-          <motion.div
-            className="relative max-w-4xl max-h-screen p-4"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <video
-              ref={fullscreenVideoRef}
-              src="/videos/fitme.mp4"
-              className="w-full h-full max-h-[80vh] object-contain rounded-lg"
-              controls
-            />
-            
-            {/* Close Button */}
-            <button
-              onClick={closeFullscreenVideo}
-              className="absolute top-6 right-6 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70 transition-all"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
-              </svg>
-            </button>
-            
-            {/* Speed Controls */}
-            <div className="absolute bottom-6 right-6 bg-black bg-opacity-50 rounded-lg p-3">
-              <div className="flex gap-2">
-                {speedOptions.map((speed) => (
-                  <button
-                    key={speed}
-                    onClick={() => handleSpeedChange(speed)}
-                    className={`text-sm px-3 py-1 rounded transition-all ${
-                      playbackSpeed === speed
-                        ? 'bg-blue-500 text-white'
-                        : 'text-white hover:bg-gray-700'
-                    }`}
-                  >
-                    {speed}x
-                  </button>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-
-      {/* Animal Plant Fullscreen Video Modal */}
-      {animalPlantFullscreen && (
-        <motion.div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={closeAnimalPlantFullscreen}
-        >
-          <motion.div
-            className="relative max-w-4xl max-h-screen p-4"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <video
-              ref={animalPlantFullscreenRef}
-              src="/videos/AnimalPlant.mp4"
-              className="w-full h-full max-h-[80vh] object-contain rounded-lg"
-              controls
-            />
-
-            {/* Close Button */}
-            <button
-              onClick={closeAnimalPlantFullscreen}
-              className="absolute top-6 right-6 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70 transition-all"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
-              </svg>
-            </button>
-
-            {/* Speed Controls */}
-            <div className="absolute bottom-6 right-6 bg-black bg-opacity-50 rounded-lg p-3">
-              <div className="flex gap-2">
-                {speedOptions.map((speed) => (
-                  <button
-                    key={speed}
-                    onClick={() => handleAnimalPlantSpeedChange(speed)}
-                    className={`text-sm px-3 py-1 rounded transition-all ${
-                      playbackSpeed === speed
-                        ? 'bg-blue-500 text-white'
-                        : 'text-white hover:bg-gray-700'
-                    }`}
-                  >
-                    {speed}x
-                  </button>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-
-      {/* FullVideo Fullscreen Video Modal */}
-      {fullVideoFullscreen && (
-        <motion.div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={closeFullVideoFullscreen}
-        >
-          <motion.div
-            className="relative max-w-4xl max-h-screen p-4"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <video
-              ref={fullVideoFullscreenRef}
-              src="/videos/fullVideo.mp4"
-              className="w-full h-full max-h-[80vh] object-contain rounded-lg"
-              controls
-            />
-
-            {/* Close Button */}
-            <button
-              onClick={closeFullVideoFullscreen}
-              className="absolute top-6 right-6 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70 transition-all"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
-              </svg>
-            </button>
-
-            {/* Speed Controls */}
-            <div className="absolute bottom-6 right-6 bg-black bg-opacity-50 rounded-lg p-3">
-              <div className="flex gap-2">
-                {speedOptions.map((speed) => (
-                  <button
-                    key={speed}
-                    onClick={() => handleFullVideoSpeedChange(speed)}
-                    className={`text-sm px-3 py-1 rounded transition-all ${
-                      playbackSpeed === speed
-                        ? 'bg-blue-500 text-white'
-                        : 'text-white hover:bg-gray-700'
-                    }`}
-                  >
-                    {speed}x
-                  </button>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
     </motion.div>
   );
 };
