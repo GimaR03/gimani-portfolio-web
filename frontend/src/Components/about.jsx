@@ -98,7 +98,7 @@ const About = () => {
               <p className="text-slate-300 mb-1">Sri Lanka Institute of Information Technology</p>
               <div className="flex items-center gap-4 text-sm text-slate-400 mb-3">
                 <span>📍 Malabe, Sri Lanka</span>
-                <span>📅 2023 - Present</span>
+                
               </div>
               <div className="bg-slate-700 rounded-lg p-4">
                 <p className="text-cyan-400 font-semibold">BSc (Hons) in Information Technology (Software Engineering)</p>
