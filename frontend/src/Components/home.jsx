@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <motion.div
-      className="min-h-screen flex flex-col lg:flex-row justify-center items-center bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-6 py-12"
+      className="min-h-screen flex flex-col lg:flex-row justify-center items-center bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 px-6 py-12 transition-colors duration-300"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -23,17 +23,17 @@ const Home = () => {
         >
           {/* Title similar to the template */}
           <div className="mb-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-none">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-none text-slate-800 dark:text-slate-100">
               Full-Stack
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-none mt-2">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-none mt-2 text-slate-800 dark:text-slate-100">
               Developer
             </h1>
           </div>
 
           {/* Name Highlight */}
           <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-light text-gray-600 dark:text-gray-300 mb-2">
+            <h2 className="text-2xl md:text-3xl font-light text-slate-500 dark:text-slate-400 mb-2">
               I'm <span className="font-bold text-blue-600 dark:text-blue-400">Gimani Rajarathna</span>
             </h2>
             <h3 className="text-xl md:text-2xl font-semibold text-blue-600 dark:text-blue-400">
@@ -43,7 +43,7 @@ const Home = () => {
 
           {/* Description */}
           <motion.p 
-            className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300 max-w-2xl"
+            className="text-base md:text-lg leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -63,13 +63,13 @@ const Home = () => {
           >
             <Link 
               to="/projects"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
+              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
             >
               View Projects
             </Link>
             <Link 
               to="/contact"
-              className="border border-gray-600 dark:border-gray-400 hover:border-blue-600 dark:hover:border-blue-400 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center"
+              className="border border-slate-400 dark:border-slate-500 hover:border-blue-600 dark:hover:border-blue-400 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center"
             >
               Contact Me
             </Link>
@@ -77,15 +77,15 @@ const Home = () => {
 
           {/* Technologies I Work With */}
           <motion.div 
-            className="mt-8 text-center"
+            className="mt-8 text-center lg:text-left"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <p className="text-gray-600 dark:text-gray-400 mb-4">Technologies I Work With</p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
-              {['Express', 'MongoDB', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'AWS', 'C', 'C++', 'HTML', 'CSS'].map((tech, index) => (
-                <span key={tech} className="bg-gray-700 dark:bg-gray-800 px-4 py-2 rounded-full text-gray-300 dark:text-gray-200">
+            <p className="text-slate-500 dark:text-slate-400 mb-4">Technologies I Work With</p>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 text-sm md:text-base">
+              {['Express', 'MongoDB', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'AWS', 'C', 'C++', 'HTML', 'CSS'].map((tech) => (
+                <span key={tech} className="bg-slate-200 dark:bg-slate-800 px-4 py-2 rounded-full text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-slate-700">
                   {tech}
                 </span>
               ))}
@@ -101,23 +101,18 @@ const Home = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className="relative">
-            {/* Main Profile Image */}
-            <div className="relative z-10">
-              <img
-                src="/images/profile.jpg"
-                alt="Gimani Rajarathna"
-                className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-lg shadow-2xl"
-              />
-            </div>
-            
-            {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-80 h-80 md:w-96 md:h-96 border-2 border-blue-400 rounded-lg -z-10"></div>
-            <div className="absolute -bottom-4 -left-4 w-80 h-80 md:w-96 md:h-96 border-2 border-gray-600 rounded-lg -z-10"></div>
+            <img
+              src="/images/profile.jpg"
+              alt="Gimani Rajarathna"
+              className="w-96 h-96 md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] object-cover rounded-full shadow-2xl border-4 border-blue-500 dark:border-blue-400"
+            />
+            {/* Decorative Circle Elements */}
+            <div className="absolute -top-3 -right-3 w-96 h-96 md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] border-2 border-blue-400 dark:border-blue-500 rounded-full -z-10"></div>
+            <div className="absolute -bottom-3 -left-3 w-96 h-96 md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] border-2 border-slate-400 dark:border-slate-600 rounded-full -z-10"></div>
           </div>
         </motion.div>
       </div>
-
-      </motion.div>
+    </motion.div>
   );
 };
 

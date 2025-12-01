@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const BloomHabit = () => {
+const Fitme = () => {
   return (
     <motion.div
       className="min-h-screen bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 px-6 py-12 transition-colors duration-300"
@@ -20,12 +20,12 @@ const BloomHabit = () => {
           initial={{ y: -20 }}
           animate={{ y: 0 }}
         >
-          BloomHabits-app-Lab-Exam-3
+          FitMe-app-Lab-Exam-2
         </motion.h1>
 
         <div className="bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700">
-          <div className="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-white text-8xl">🌱</span>
+          <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-white text-8xl">💪</span>
           </div>
 
           <div className="inline-block px-4 py-2 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 rounded-full text-sm font-semibold mb-4">
@@ -34,29 +34,27 @@ const BloomHabit = () => {
 
           <h2 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Project Overview</h2>
           <p className="text-slate-500 dark:text-slate-400 mb-6">
-            A comprehensive habit tracking mobile application that helps users build and maintain positive routines. 
-            BloomHabits was developed as part of my Mobile Application Development Module – Lab Exam 3.
+            This mobile application was developed as part of my Mobile Application Development Module – Assignment 2. 
+            FitMe is a fitness tracking app built with Kotlin for Android devices.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Technologies Used</h2>
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full">Kotlin</span>
             <span className="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 rounded-full">Android</span>
-            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full">Habit Tracking</span>
-            <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-300 rounded-full">Alarm System</span>
+            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full">Mobile App</span>
           </div>
 
           <h2 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Features</h2>
           <ul className="list-disc list-inside text-slate-500 dark:text-slate-400 space-y-2 mb-6">
-            <li>Customizable habit alarms and reminders</li>
-            <li>Smart notifications for habit completion</li>
-            <li>Progress analytics and tracking</li>
-            <li>Streak tracking to motivate consistent habit formation</li>
+            <li>Fitness tracking and monitoring</li>
+            <li>Workout planning and scheduling</li>
+            <li>Progress analytics and reports</li>
             <li>User-friendly mobile interface</li>
           </ul>
 
           <a 
-            href="https://github.com/GimaR03/BloomHabits-app-Lab-Exam-3" 
+            href="https://github.com/GimaR03/FitMe-app-Lab-Exam-2-" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
@@ -69,4 +67,4 @@ const BloomHabit = () => {
   );
 };
 
-export default BloomHabit;
+export default Fitme;

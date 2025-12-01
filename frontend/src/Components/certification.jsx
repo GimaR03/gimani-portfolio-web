@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Certification = () => {
   return (
     <motion.div
-      className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-6 py-12"
+      className="min-h-screen bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 px-6 py-12 transition-colors duration-300"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -27,17 +27,17 @@ const Certification = () => {
           ].map((cert, index) => (
             <motion.div 
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex items-center space-x-4"
+              className="bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg p-6 flex items-center space-x-4 border border-slate-200 dark:border-slate-700"
               initial={{ x: -50 }}
               animate={{ x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                <span className="text-blue-600 dark:text-blue-400 font-bold">📜</span>
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center">
+                <span className="text-2xl">📜</span>
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">{cert.name}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{cert.issuer} • {cert.date}</p>
+                <p className="text-slate-500 dark:text-slate-400">{cert.issuer} • {cert.date}</p>
               </div>
             </motion.div>
           ))}
