@@ -74,9 +74,11 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
-              <span className="text-white text-6xl">🍰</span>
-            </div>
+            <img 
+              src="/images/cakeFull.png" 
+              alt="Online Cake Shop" 
+              className="w-full h-48 object-cover"
+            />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
                 Online Cake Shop
@@ -143,9 +145,11 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="h-48 bg-gradient-to-br from-red-400 to-orange-500 flex items-center justify-center">
-              <span className="text-white text-6xl">🚗</span>
-            </div>
+            <img 
+              src="/images/spareParts.png" 
+              alt="Vehicle Spire Parts Management System" 
+              className="w-full h-48 object-cover"
+            />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
                 Vehicle Spire Parts Management System
@@ -205,9 +209,11 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
-              <span className="text-white text-6xl">🌱</span>
-            </div>
+            <img 
+              src="/images/habitBloomFull.png" 
+              alt="BloomHabits App" 
+              className="w-full h-48 object-cover"
+            />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
                 BloomHabits-app-Lab-Exam-3
@@ -257,9 +263,11 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="h-48 bg-gradient-to-br from-blue-400 to-teal-500 flex items-center justify-center">
-              <span className="text-white text-6xl">🏥</span>
-            </div>
+            <img 
+              src="/images/mediacalFUll.png" 
+              alt="Online Medical Portal" 
+              className="w-full h-48 object-cover"
+            />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
                 Online Medical Portal
@@ -332,9 +340,11 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-              <span className="text-white text-6xl">🌿</span>
-            </div>
+            <img 
+              src="/images/animalplantFull.png" 
+              alt="Animal Plant Health Management" 
+              className="w-full h-48 object-cover"
+            />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
                 Animal Plant Health Management
@@ -383,9 +393,11 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
-              <span className="text-white text-6xl">💪</span>
-            </div>
+            <img 
+              src="/images/fitmeFull.png" 
+              alt="FitMe App" 
+              className="w-full h-48 object-cover"
+            />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
                 FitMe-app-Lab-Exam-2
@@ -434,9 +446,11 @@ const ViewProject = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
-              <span className="text-white text-6xl">🌾</span>
-            </div>
+            <img 
+              src="/images/FramFull.png" 
+              alt="Smart Farm Management System" 
+              className="w-full h-48 object-cover"
+            />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
                 Smart Farm Management System
