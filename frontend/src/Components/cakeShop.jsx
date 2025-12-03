@@ -24,9 +24,11 @@ const CakeShop = () => {
         </motion.h1>
 
         <div className="bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700">
-          <div className="h-48 bg-gradient-to-br from-pink-400 to-red-500 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-white text-8xl">🍰</span>
-          </div>
+          <img 
+            src="/images/cakeFull.png" 
+            alt="Online Cake Shop" 
+            className="w-full h-48 object-cover rounded-lg mb-6"
+          />
 
           <div className="inline-block px-4 py-2 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 rounded-full text-sm font-semibold mb-4">
             👤 Self Activity Project
