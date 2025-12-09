@@ -1,5 +1,12 @@
+
+// useEffect → to load previously saved theme (dark/light) when Navbar mounts
 import React, { useState, useEffect } from 'react';
+
+// Importing Link for client-side navigation
+// Importing useLocation to detect the current URL and highlight active menu item
 import { Link, useLocation } from 'react-router-dom';
+
+// Importing motion from Framer Motion to add smooth animations to navbar elements
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
