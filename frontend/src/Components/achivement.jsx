@@ -1,4 +1,7 @@
+// Importing React to create the component and use JSX
 import React from "react";
+
+// Importing motion from Framer Motion to add smooth animations to elements
 import { motion } from "framer-motion";
 
 const Achievement = () => {
