@@ -33,6 +33,13 @@ const About = () => {
         "Dived deep into modern web development, mastering React, Next.js, and backend technologies while maintaining excellent academic performance.",
       icon: "💻",
     },
+    {
+      year: "2026",
+      title: "Starting Internship",
+      description:
+        "Embarking on my first professional internship, applying academic knowledge to real-world projects, collaborating with industry experts, and gaining hands-on experience in full-stack software development.",
+      icon: "💼",
+    },
   ];
 
   return (
