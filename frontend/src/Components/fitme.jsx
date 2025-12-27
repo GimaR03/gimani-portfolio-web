@@ -19,7 +19,9 @@ const Fitme = () => {
         </Link>
 
         <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-6 text-blue-600 dark:text-blue-400"
+          className="text-4xl md:text-5xl font-bold mb-6 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400"
           initial={{ y: -20 }}
           animate={{ y: 0 }}
         >
@@ -37,14 +39,18 @@ const Fitme = () => {
             👤 Self Activity Project
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Project Overview</h2>
           <p className="text-slate-500 dark:text-slate-400 mb-6">
             This mobile application was developed as part of my Mobile
             Application Development Module – Assignment 2. FitMe is a fitness
             tracking app built with Kotlin for Android devices.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-4">Technologies Used</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Technologies Used</h2>
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full">
               Kotlin
@@ -57,7 +63,9 @@ const Fitme = () => {
             </span>
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4">Features</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Features</h2>
           <ul className="list-disc list-inside text-slate-500 dark:text-slate-400 space-y-2 mb-6">
             <li>Fitness tracking and monitoring</li>
             <li>Workout planning and scheduling</li>
@@ -71,7 +79,7 @@ const Fitme = () => {
               href="https://github.com/GimaR03/FitMe-app-Lab-Exam-2-"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 dark:from-blue-400 dark:to-cyan-400 dark:hover:from-blue-500 dark:hover:to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View on GitHub
             </a>
@@ -80,7 +88,7 @@ const Fitme = () => {
               href="https://vimeo.com/1149272746?share=copy&fl=sv&fe=ci"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="inline-block border border-slate-400 dark:border-slate-500 hover:border-blue-600 dark:hover:border-blue-400 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
             >
               ▶ View Video
             </a>
