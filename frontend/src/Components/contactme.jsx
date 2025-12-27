@@ -49,7 +49,9 @@ const ContactMe = () => {
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">
             Get In Touch
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
@@ -65,9 +67,10 @@ const ContactMe = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold mb-8 text-blue-600 dark:text-blue-400 flex items-center">
-              <FaMapMarkerAlt className="mr-3" />
-              Contact Information
+            <h2 className="text-2xl font-bold mb-8 flex items-center">
+              <FaMapMarkerAlt className="mr-3 text-blue-600 dark:text-blue-400" />
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+              dark:from-blue-400 dark:to-cyan-400">Contact Information</span>
             </h2>
             
             <div className="space-y-6">
@@ -77,8 +80,8 @@ const ContactMe = () => {
                 whileHover={{ x: 5 }}
                 onClick={handleEmailClick}
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
-                  <FaEnvelope className="text-white text-xl" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 dark:bg-slate-700 flex items-center justify-center">
+                  <FaEnvelope className="text-white dark:text-slate-200 text-xl" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-slate-700 dark:text-slate-300 mb-1">Email Address</h3>
@@ -103,8 +106,8 @@ const ContactMe = () => {
                 whileHover={{ x: 5 }}
                 onClick={handlePhoneClick}
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center">
-                  <FaPhone className="text-white text-xl" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 dark:bg-slate-700 flex items-center justify-center">
+                  <FaPhone className="text-white dark:text-slate-200 text-xl" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-slate-700 dark:text-slate-300 mb-1">Phone Number</h3>
@@ -140,8 +143,8 @@ const ContactMe = () => {
                 whileHover={{ x: 5 }}
                 onClick={() => handleCopyToClipboard(contactDetails.address)}
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center">
-                  <FaMapMarkerAlt className="text-white text-xl" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 dark:bg-slate-700 flex items-center justify-center">
+                  <FaMapMarkerAlt className="text-white dark:text-slate-200 text-xl" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-slate-700 dark:text-slate-300 mb-1">Address</h3>
@@ -163,12 +166,14 @@ const ContactMe = () => {
 
             {/* Social Media Links */}
             <div className="mt-10">
-              <h3 className="text-xl font-semibold mb-6 text-slate-700 dark:text-slate-300">Connect With Me</h3>
+              <h3 className="text-xl font-semibold mb-6 
+              bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+              dark:from-blue-400 dark:to-cyan-400">Connect With Me</h3>
               <div className="flex flex-wrap gap-4">
                 {/* GitHub */}
                 <motion.button
                   onClick={() => handleSocialClick(contactDetails.github)}
-                  className="flex items-center space-x-3 px-5 py-3 bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white rounded-lg transition-all duration-300 group"
+                  className="flex items-center space-x-3 px-5 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 dark:from-blue-400 dark:to-cyan-400 dark:hover:from-blue-500 dark:hover:to-cyan-500 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -180,11 +185,11 @@ const ContactMe = () => {
                 {/* Gmail */}
                 <motion.button
                   onClick={handleEmailClick}
-                  className="flex items-center space-x-3 px-5 py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-lg transition-all duration-300 group"
+                  className="flex items-center space-x-3 px-5 py-3 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-lg border-2 border-slate-300 dark:border-slate-600 hover:border-slate-400 dark:hover:border-slate-500 transition-all duration-300 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <SiGmail className="text-xl" />
+                  <SiGmail className="text-xl text-slate-900 dark:text-white" />
                   <span className="font-medium">Gmail</span>
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
                 </motion.button>
@@ -192,11 +197,11 @@ const ContactMe = () => {
                 {/* WhatsApp */}
                 <motion.button
                   onClick={handleWhatsAppClick}
-                  className="flex items-center space-x-3 px-5 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-lg transition-all duration-300 group"
+                  className="flex items-center space-x-3 px-5 py-3 bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white rounded-lg transition-all duration-300 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaWhatsapp className="text-xl" />
+                  <FaWhatsapp className="text-xl text-white" />
                   <span className="font-medium">WhatsApp</span>
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
                 </motion.button>
@@ -211,7 +216,9 @@ const ContactMe = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h2 className="text-2xl font-bold mb-8 text-blue-600 dark:text-blue-400">Send Me a Message</h2>
+            <h2 className="text-2xl font-bold mb-8 
+            bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+            dark:from-blue-400 dark:to-cyan-400">Send Me a Message</h2>
             
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -265,7 +272,7 @@ const ContactMe = () => {
               
               <motion.button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700 text-white font-semibold py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 dark:from-blue-400 dark:to-cyan-400 dark:hover:from-blue-500 dark:hover:to-cyan-500 text-white font-semibold py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -285,33 +292,33 @@ const ContactMe = () => {
 
         {/* Quick Contact Bar */}
         <motion.div 
-          className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-700 dark:to-purple-700 rounded-2xl p-6 text-white"
+          className="mt-12 bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-400 rounded-2xl p-6 text-white shadow-xl"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0 text-center md:text-left">
-              <h3 className="text-xl font-bold mb-2">Ready to work together?</h3>
-              <p className="text-blue-100">Let's discuss your project ideas and opportunities</p>
+              <h3 className="text-xl font-bold mb-2 text-white">Ready to work together?</h3>
+              <p className="text-white/90">Let's discuss your project ideas and opportunities</p>
             </div>
             <div className="flex flex-wrap gap-4">
               <motion.button
                 onClick={handleEmailClick}
-                className="px-6 py-3 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors duration-300"
+                className="px-6 py-3 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-semibold rounded-lg border-2 border-slate-300 dark:border-slate-600 hover:border-slate-400 dark:hover:border-slate-500 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaEnvelope className="inline mr-2" />
+                <FaEnvelope className="inline mr-2 text-slate-900 dark:text-white" />
                 Email Me
               </motion.button>
               <motion.button
                 onClick={handleWhatsAppClick}
-                className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors duration-300"
+                className="px-6 py-3 bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaWhatsapp className="inline mr-2" />
+                <FaWhatsapp className="inline mr-2 text-white" />
                 WhatsApp
               </motion.button>
             </div>
