@@ -24,7 +24,9 @@ const MedicalPortal = () => {
         </Link>
         
         <motion.h1 
-          className="text-4xl md:text-5xl font-bold mb-6 text-blue-600 dark:text-blue-400"
+          className="text-4xl md:text-5xl font-bold mb-6 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400"
           initial={{ y: -20 }}
           animate={{ y: 0 }}
         >
@@ -42,13 +44,17 @@ const MedicalPortal = () => {
             🎓 University Group Project
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Project Overview</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Project Overview</h2>
           <p className="text-slate-500 dark:text-slate-400 mb-6">
             A comprehensive online medical portal for patient management, appointment scheduling, and healthcare services 
             with multi-language support. This platform streamlines healthcare operations and improves patient experience.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Technologies Used</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Technologies Used</h2>
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full">PHP (65.9%)</span>
             <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/50 text-pink-600 dark:text-pink-300 rounded-full">CSS (24.5%)</span>
@@ -56,7 +62,9 @@ const MedicalPortal = () => {
             <span className="px-3 py-1 bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-300 rounded-full">Healthcare</span>
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Features</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Features</h2>
           <ul className="list-disc list-inside text-slate-500 dark:text-slate-400 space-y-2 mb-6">
             <li>Patient registration and management</li>
             <li>Appointment scheduling system</li>
@@ -70,7 +78,7 @@ const MedicalPortal = () => {
             href="https://github.com/GimaR03/Online_medical_portal" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 dark:from-blue-400 dark:to-cyan-400 dark:hover:from-blue-500 dark:hover:to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             View on GitHub
           </a>
@@ -78,7 +86,9 @@ const MedicalPortal = () => {
 
         {/* Team Section */}
         <div className="bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700">
-          <h2 className="text-2xl font-semibold mb-6 text-slate-800 dark:text-slate-200 text-center">👥 Project Team</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">👥 Project Team</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (

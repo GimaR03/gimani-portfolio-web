@@ -26,7 +26,9 @@ const VehicleSpire = () => {
         </Link>
 
         <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-6 text-blue-600 dark:text-blue-400"
+          className="text-4xl md:text-5xl font-bold mb-6 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400"
           initial={{ y: -20 }}
           animate={{ y: 0 }}
         >
@@ -44,7 +46,9 @@ const VehicleSpire = () => {
             🎓 University Group Project
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Project Overview</h2>
           <p className="text-slate-500 dark:text-slate-400 mb-6">
             A comprehensive vehicle spare parts management system developed for our
             2nd Year 1st Semester OOP module. This web-based platform allows owners
@@ -52,7 +56,9 @@ const VehicleSpire = () => {
             browse and purchase vehicle parts seamlessly.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-4">Technologies Used</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Technologies Used</h2>
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="px-3 py-1 bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-300 rounded-full">
               Java (99%)
@@ -68,7 +74,9 @@ const VehicleSpire = () => {
             </span>
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4">Features</h2>
+          <h2 className="text-2xl font-semibold mb-4 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">Features</h2>
           <ul className="list-disc list-inside text-slate-500 dark:text-slate-400 space-y-2 mb-6">
             <li>Spare parts inventory management</li>
             <li>Owner dashboard for uploading parts</li>
@@ -84,7 +92,7 @@ const VehicleSpire = () => {
               href="https://github.com/GimaR03/Vehicle_spare_parts"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 dark:from-blue-400 dark:to-cyan-400 dark:hover:from-blue-500 dark:hover:to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View on GitHub
             </a>
@@ -93,7 +101,7 @@ const VehicleSpire = () => {
               href="https://vimeo.com/1149270247?share=copy&fl=sv&fe=ci"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="inline-block border border-slate-400 dark:border-slate-500 hover:border-blue-600 dark:hover:border-blue-400 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
             >
               ▶ View Video
             </a>
@@ -102,7 +110,9 @@ const VehicleSpire = () => {
 
         {/* Team Section */}
         <div className="bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg p-8 border border-slate-200 dark:border-slate-700">
-          <h2 className="text-2xl font-semibold mb-6 text-center">
+          <h2 className="text-2xl font-semibold mb-6 text-center 
+          bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent 
+          dark:from-blue-400 dark:to-cyan-400">
             👥 Project Team
           </h2>
 
